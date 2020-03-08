@@ -560,7 +560,7 @@ namespace Jellyfin.Drawing.Skia
                 using (var resizedBitmap = new SKBitmap(width, height, bitmap.ColorType, bitmap.AlphaType))
                 {
                     // scale image
-                    bitmap.ScalePixels(resizedBitmap, SKFilterQuality.High);
+                    bitmap.ScalePixels(resizedBitmap, SKFilterQuality.None);
 
                     // If all we're doing is resizing then we can stop now
                     if (!hasBackgroundColor && !hasForegroundColor && blur == 0 && !hasIndicator)
