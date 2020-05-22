@@ -225,7 +225,7 @@ namespace MediaBrowser.WebDashboard.Api
                     return _resultFactory.GetStaticResult(Request, plugin.Version.ToString().GetMD5(), null, null, MimeTypes.GetMimeType("page.html"), () => Task.FromResult(stream));
                 }
 
-                return _resultFactory.GetStaticResult(Request, plugin.Version.ToString().GetMD5(), null, null, MimeTypes.GetMimeType("page.html"), () => PackageCreator.ModifyHtml(false, stream, null, _appHost.ApplicationVersionString, null));
+                return _resultFactory.GetStaticResult(Request, plugin.Version.ToString().GetMD5(), null, null, MimeTypes.GetMimeType("page.html"), () => GetPackageCreator(DashboardUIPath).ModifyHtml(false, stream, null, _appHost.ApplicationVersionString, null));
             }
 
             throw new ResourceNotFoundException();

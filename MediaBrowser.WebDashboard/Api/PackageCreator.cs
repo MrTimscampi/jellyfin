@@ -60,7 +60,7 @@ namespace MediaBrowser.WebDashboard.Api
         /// A task that represents the async operation to read and modify the input stream.
         /// The task result contains a stream containing the modified HTML content.
         /// </returns>
-        public static async Task<Stream> ModifyHtml(
+        public async Task<Stream> ModifyHtml(
             bool isMainIndexPage,
             Stream sourceStream,
             string mode,
