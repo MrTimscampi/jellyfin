@@ -457,8 +457,10 @@ namespace Emby.Server.Implementations.HttpServer
                 }
 
                 if (string.Equals(localPath, _baseUrlPrefix + "/", StringComparison.OrdinalIgnoreCase)
+                    || string.Equals(localPath, _baseUrlPrefix + "/#", StringComparison.OrdinalIgnoreCase)
                     || string.Equals(localPath, _baseUrlPrefix, StringComparison.OrdinalIgnoreCase)
                     || string.Equals(localPath, "/", StringComparison.OrdinalIgnoreCase)
+                    || string.Equals(localPath, "/#", StringComparison.OrdinalIgnoreCase)
                     || string.IsNullOrEmpty(localPath)
                     || !localPath.StartsWith(_baseUrlPrefix, StringComparison.OrdinalIgnoreCase))
                 {
