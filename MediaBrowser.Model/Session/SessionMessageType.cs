@@ -11,6 +11,7 @@ namespace MediaBrowser.Model.Session
         ForceKeepAlive,
         GeneralCommand,
         UserDataChanged,
+        ItemDataChanged,
         Sessions,
         Play,
         SyncPlayCommand,
