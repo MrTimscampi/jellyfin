@@ -119,7 +119,7 @@ namespace Jellyfin.Drawing.Skia
             };
             canvas.DrawRect(0, 0, width, height, paintColor);
 
-            var typeFace = SKTypeface.FromFamilyName("sans-serif", SKFontStyleWeight.Bold, SKFontStyleWidth.Normal, SKFontStyleSlant.Upright);
+            var typeFace = SKTypeface.FromFamilyName("sans-serif", SKFontStyleWeight.Bold, SKFontStyleWidth.Normal, SKFontStyleSlant.Upright) ?? SKTypeface.CreateDefault();
 
             // use the system fallback to find a typeface for the given CJK character
             var nonCjkPattern = @"[^\p{IsCJKUnifiedIdeographs}\p{IsCJKUnifiedIdeographsExtensionA}\p{IsKatakana}\p{IsHiragana}\p{IsHangulSyllables}\p{IsHangulJamo}]";
